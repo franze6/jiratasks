@@ -26,7 +26,7 @@ const base64string = Buffer.from(`${login}:${password}`).toString('base64');
 const body = JSON.stringify({
   jql: `project = ${projectCode} AND issuetype = Task AND 'Start date' >= ${startDate} AND 'Start date' <= ${endDate} AND assignee in (${user}) ORDER BY priority DESC, updated DESC`,
   startAt: 0,
-  maxResults: 15,
+  maxResults: 50,
   fields: [
     "summary"
   ]
